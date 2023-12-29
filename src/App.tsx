@@ -6,7 +6,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename={"/cr-exchange/"}>
       <Routes>
         <Route path={HOME_PATH} element={<Home />} />
         <Route path="*" element={<NotFoundPage />} />
