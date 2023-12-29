@@ -1,0 +1,35 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+label {
+  font-size: var(--font-16);
+  text-align: start;
+  padding-block: 1rem;
+}
+
+.input {
+  font-size: var(--font-16);
+  background-color: var(--input-fill-color);
+  color: var(--main-color);
+  border: 1px solid var(--input-stroke-color);
+  max-width: 72rem;
+  padding-block: 0;
+  padding-inline: 0;
+  border-radius: var(--border-corner);
+  height: 2.8rem;
+  padding: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    width: 100%;
+  }
+}

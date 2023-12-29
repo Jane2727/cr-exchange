@@ -1,0 +1,50 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  max-width: 100rem;
+  text-align: left;
+  width: auto;
+  padding: 2rem;
+}
+
+.converter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.first-line {
+  display: flex;
+  align-items: center;
+  margin-block-start: 5rem;
+  gap: 1rem;
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 5rem;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.button-switch svg:hover:not(:disabled) {
+  fill: var(--hover-button-bg-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .first-line {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .second-line {
+    flex-wrap: wrap;
+  }
+
+  .button-switch {
+    transform: rotate(90deg);
+  }
+}

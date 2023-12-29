@@ -1,0 +1,125 @@
+.input-currency-wrapper {
+  display: flex;
+  position: relative;
+  background-color: var(--input-fill-color);
+  color: var(--main-color);
+  border: 1px solid var(--input-stroke-color);
+  max-width: 43.8rem;
+  border-radius: var(--border-corner);
+  height: 4.8rem;
+}
+
+.input-currency {
+  font-size: var(--font-16);
+  padding-block: 0;
+  padding-inline: 0;
+  background: transparent;
+  border: none;
+  flex-grow: 1;
+  padding: 1rem;
+  min-width: 5rem;
+  width: 100%;
+}
+
+.dd-list {
+  height: 20rem;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 43.8rem;
+  list-style: none;
+  font-size: var(--font-16);
+  background-color: var(--input-fill-color);
+  border: 1px solid var(--input-stroke-color);
+  border-radius: var(--border-corner);
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-block: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.dd-header {
+  position: relative;
+  width: 15rem;
+  display: flex;
+  height: 4.8rem;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  flex-shrink: 0;
+}
+
+.dd-header:hover {
+  background-color: var(--hover-button-bg-color);
+  color: var(--white-color);
+  cursor: pointer;
+  border-top-right-radius: var(--border-corner);
+  border-bottom-right-radius: var(--border-corner);
+}
+
+.dd-header::before {
+  content: "";
+  width: 1px;
+  height: 3rem;
+  background-color: var(--input-stroke-color);
+  position: absolute;
+  left: 1px;
+  top: 1rem;
+}
+
+.dd-header:hover::before {
+  background-color: var(--hover-button-bg-color);
+}
+
+.dd-header:hover svg {
+  fill: var(--white-color);
+}
+
+.dd-option {
+  height: 4.8rem;
+}
+
+.dd-item {
+  display: grid;
+  grid-template-columns: 5rem 10rem 1fr;
+  text-align: left;
+  height: 100%;
+  align-items: center;
+}
+
+.dd-item svg {
+  justify-self: center;
+}
+
+.dd-item__name {
+  color: var(--arrow-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.dd-option:hover {
+  background-color: var(--hover-button-bg-color);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.dd-option:hover .dd-item__name {
+  color: var(--white-color);
+}
+
+.dd-item__selected {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-currency-wrapper,
+  .input-currency {
+    max-width: none;
+    width: 100%;
+  }
+}

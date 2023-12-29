@@ -1,0 +1,14 @@
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.not-found-title {
+  font-size: var(--font-24);
+  margin-block: 2rem;
+}
+
+.not-found-button {
+  width: 20rem;
+}
